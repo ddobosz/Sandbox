@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+// Public interface
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *welcomeMessageLabel;
+- (IBAction)didTouchButton:(id)sender;
 
 @end
 

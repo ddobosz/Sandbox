@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
+// This is private.  A "Class continuation"
+
 @interface ViewController ()
+// "category methods" go here, similar to "extension methods"
 
 @end
 
@@ -24,4 +27,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)didTouchButton:(id)sender {
+    _welcomeMessageLabel.text = @"In button handler";
+    [UIView animateWithDuration:1.0 animations:^{
+        self.view.backgroundColor = [UIColor redColor];
+        _welcomeMessageLabel.frame = CGRectMake(0, 0, 200, 50);
+    }];
+}
 @end
